@@ -1,0 +1,32 @@
+<h2>Exercício 4</h2>
+<h4>Desenvolva um programa em Javascript para obter o peso e a altura de uma pessoa e a partir desses dados, exibir o valor do IMC – Índice de Massa Corporal – e a situação da pessoa em relação ao IMC (Interpretação do IMC). Exibir também a faixa de peso ideal para a altura (peso mínimo, peso médio e peso máximo).</h4>
+
+{{! 4. Crie um algoritmo para cálculo do IMC de uma pessoa. Obs.: utilize uma função para processar os dados recebidos. Desenvolva um programa em Javascript para obter o peso e a altura de uma pessoa e a partir desses dados, exibir o valor do IMC – Índice de Massa Corporal – e a situação da pessoa em relação ao IMC (Interpretação do IMC). Exibir também a faixa de peso ideal para a altura (peso mínimo, peso médio e peso máximo).
+
+IMC = Peso (Kg) / Altura2 (m)
+Pesomin = 18.5 * Altura2
+Pesomax = 24.9 * Altura2
+Pesomed = (Pesomin + Pesomax) / 2
+
+Interpretação do IMC de acordo com a Organização Mundial de Saúde:
+Cálculo IMC Situação
+Abaixo de 18,5 Você está abaixo do peso ideal
+Entre 18,5 e 24,9 Parabéns – Você está em seu peso normal!
+Entre 25,0 e 29,9 Você está acima de seu peso (sobrepeso)
+Entre 30,0 e 34,9 Obesidade grau I
+Entre 35,0 e 39,9 Obesidade grau II
+40,0 e acima Obesidade grau III
+}}
+
+<br>
+<div class="form-group">
+    <form action="" method="post">
+        <input type="number" class="form-control" name="inpPeso" id="inpPeso" aria-describedby="helpId" placeholder="(Peso vai aqui)"><br>
+        <input type="text" class="form-control" name="inpAltura" id="inpAltura" aria-describedby="helpId" placeholder="(Altura vai aqui)"><br>
+        <button type="submit" class="btn btn-primary">Testar</button>
+    </form>
+</div>
+
+<div class="container p-3">
+    <h3>{{{resultado}}}</h3>
+</div>

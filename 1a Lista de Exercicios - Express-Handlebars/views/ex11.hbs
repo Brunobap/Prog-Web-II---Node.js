@@ -1,0 +1,43 @@
+<h2>Exercício 11</h2>
+<h4>Utilizando vetores, cadastre 10 pessoas, sendo que você deverá utilizar um vetor para cadastrar cada pessoa. Obtenha seguintes dados do usuário: nome, cidade, idade, sexo.</h4>
+
+{{! 11. Utilizando vetores, cadastre 10 pessoas, sendo que você deverá
+utilizar um vetor para cadastrar cada pessoa. Obtenha seguintes
+dados do usuário: nome, cidade, idade, sexo. Ao final do cadastro e
+armazenamento seu programa deverá exibir:
+1. Uma listagem de todos os nomes e idades das pessoas
+cadastradas;
+2. Uma listagem de todos os nomes de quem mora em Santos;
+3. Uma listagem de todos os nomes de quem tem mais de 18 anos;
+4. E quantas pessoas cadastradas são do sexo masculino.}}
+
+<div class="container">
+    <form method="post">
+        {{#each pessoa}}
+            <div class="form-group row">
+                <div class="col-4">
+                    <input type="text" class="form-control" name="np{{this}}" id="np{{this}}" placeholder="nome {{this}}">
+                </div>
+                <div class="col-4">
+                    <input type="text" class="form-control" name="cp{{this}}" id="cp{{this}}" placeholder="cidade {{this}}">
+                </div>
+                <div class="col-2">
+                    <input type="number" class="form-control" name="ip{{this}}" id="ip{{this}}" placeholder="idade {{this}}">
+                </div>
+                <div class="col-2">
+                    <label for="Msp{{this}}">Masculino</label>
+                    <input type="radio" class="form-control" name="sp{{this}}" id="Msp{{this}}" value="M">
+                    <label for="Fsp{{this}}">Feminino</label>
+                    <input type="radio" class="form-control" name="sp{{this}}" id="Fsp{{this}}" value="F">
+                </div>
+            </div><br>
+        {{/each}}
+        <button type="submit" class="btn btn-primary col-sm-4">Enviar</button>
+    </form>
+</div>
+
+<div class="container p-3">
+    {{#each lista}}
+        <h3>{{{this}}}</h3><br>
+    {{/each}}
+</div>

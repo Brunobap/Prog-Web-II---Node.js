@@ -1,0 +1,30 @@
+<h2>Exercício 6</h2>
+<h4>Fazer uma aplicação para ajudar quem tem carro flex (gasolina e etanol), qual o combustível mais vantajoso.</h4>
+
+{{! 6. Fazer uma aplicação para ajudar quem tem carro flex (gasolina e etanol), qual o combustível mais vantajoso. Segundo pesquisas com as montadoras para usuário normais de veículos de combustíveis, o mais importante a considerar quando abastecer o automóvel é a diferença de preços. Pois o consumo do etanol é um pouco maior que o consumo de gasolina no mesmo motor. Segundo essas pesquisas em média, os carros leves mais utilizados nas ruas consomem 30% a mais com o etanol do que com gasolina. A partir dessa informação, podemos concluir que é mais vantajoso abastecer com etanol se o litro custar até 70% do valor do litro da gasolina.
+Veja o exemplo das telas a seguir:
+
+Imagens disponíveis no link:
+http://ricardoramosdeoliveira.com.br/downloads/imgs.zip}}
+
+<img src="{{imgSrc}}" id="img" alt="resultado da comparação"><br>
+<div class="form-group">
+    <form action="" method="post">
+        <input type="text" name="etanol" id="etanol" class="form-control" placeholder="(valor do etanol vai aqui)" aria-describedby="helpId"><br>
+        <input type="text" name="gasolina" id="gasolina" class="form-control" placeholder="(valor da gasolina vai aqui)" aria-describedby="helpId"><br>
+        <button type="submit" class="btn btn-primary">Comparar</button><br><br>
+        <button type="reset" class="btn btn-primary">Limpar</button>
+    </form>
+</div>
+
+<div class="container p-3">
+    <h3>{{{dados}}}</h3>
+</div>
+
+<script>
+    const formulario = document.querySelector("form");
+    const img = document.querySelector("#img");
+    formulario.addEventListener("reset", function() {
+        img.src = "assets/images/neutro.png";
+    });
+</script>
