@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale=1">
+    <title>{{titulo}}Pizza DEV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <script src="../../public/assets/js/admin.js" defer></script>
+    {{#if isHome}}
+        <link rel="stylesheet" href="assets/css/icons.css" />
+        <link rel="stylesheet" href="assets/css/normalize.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <script src="../../public/assets/js/main.js" defer></script>
+    {{/if}}
+</head>
+<body>
+    <div class="container p-5">
+        {{#if hasHeader}}
+            <header class="topo flex container-padding">
+                <img src="../assets/images/pizza-dev.png" alt="Pizza DEV" />                
+                <nav class="menu">
+                    <a href="/admin" {{#if isPizzas}}class="active"{{/if}} >Pizzas</a>
+                    <a href="/admin/mensagens" {{#if isMensagens}}class="active"{{/if}} >Mensagens</a>
+                    <a href="/admin/usuarios" {{#if isUsuarios}}class="active"{{/if}} >Usuários</a>
+                    {{#if isLogged}}
+                        <a href="/admin/login" {{#if isLogin}}class="active"{{/if}} >Sair</a>
+                    {{/if}}
+                </nav>
+            </header>
+        {{/if}}
+        {{{body}}}    
+    </div>     
+</body>
+</html>

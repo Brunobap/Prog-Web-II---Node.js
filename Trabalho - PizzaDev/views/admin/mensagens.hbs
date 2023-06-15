@@ -1,0 +1,41 @@
+<div class="pagina container">
+    <div class="cabecalho flex">
+        <br />
+    </div>
+    <div class="tabela-responsiva">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome completo</th>
+                    <th>E-mail</th>
+                    <th>Assunto</th>
+                    <th>Mensagem</th>
+                    <th width="95"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each mensagem}}
+                   <tr>
+                        <td>
+                            {{{this.nome}}}
+                        </td>
+                        <td>
+                            {{{this.email}}}
+                        </td>
+                        <td>
+                            {{{this.assunto}}}
+                        </td>
+                        <td>
+                            {{{this.conteudo}}}
+                        </td>
+                        <td>
+                            <a href="mensagens.html" class="btn-excluir">
+                                <i class="fa-regular fa-trash-can"></i> Excluir
+                            </a>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

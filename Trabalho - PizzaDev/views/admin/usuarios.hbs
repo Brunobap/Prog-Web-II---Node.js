@@ -1,0 +1,40 @@
+<div class="pagina container">
+    <div class="cabecalho flex">
+        <a href="/admin/cadastrar-usuario" class="botao">
+            Novo Usuário
+        </a>
+    </div>
+    <div class="tabela-responsiva">
+        <table>
+            <thead>
+                <tr>
+                    <th width="430">Nome completo</th>
+                    <th width="320">Usuário</th>
+                    <th colspan="2"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each usuario}}
+                    <tr>
+                        <td>
+                            {{{this.nome}}}
+                        </td>
+                        <td>
+                            {{{this.usuario}}}
+                        </td>
+                        <td>
+                            <a href="/admin/editar-usuario" class="btn-editar">
+                                <i class="fa-solid fa-pen-to-square"></i> Editar
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/admin/usuarios" class="btn-excluir">
+                                <i class="fa-regular fa-trash-can"></i> Excluir
+                            </a>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

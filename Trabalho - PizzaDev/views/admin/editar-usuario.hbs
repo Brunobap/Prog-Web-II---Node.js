@@ -1,0 +1,30 @@
+<div class="pagina container">
+    <div class="cabecalho flex bordered">
+        <h1>Editar Usuário</h1>
+        <a href="usuarios.html" class="botao">
+            Voltar
+        </a>
+    </div>
+
+    {{#if isPosted}}
+        {{#if hasSuccess}}
+           <div class="msg-sucesso">
+                Exemplo de mensagem de sucesso!
+            </div>
+        {{else}}
+            <div class="msg-erro">
+                Exemplo de mensagem de erro!
+            </div>
+        {{/if}}        
+    {{/if}}
+
+    <form action="" method="post">
+        <input type="text" name="nomeCompleto" id="nomeCompleto" class="input-field" placeholder="* Nome completo" />
+        <input type="text" name="usuario" id="usuario" class="input-field" placeholder="* Usuário" />
+        <input type="password" name="senha" id="senha" class="input-field" placeholder="* Senha" />
+        <input type="password" name="confirmacaoSenha" id="confirmacaoSenha" class="input-field" placeholder="* Confirmar senha" />
+        <button type="submit" class="botao">
+            Salvar
+        </button>
+    </form>
+</div>

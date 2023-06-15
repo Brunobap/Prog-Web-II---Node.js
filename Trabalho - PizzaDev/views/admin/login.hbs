@@ -1,0 +1,32 @@
+<header class="topo flex container-padding">
+    <img src="../assets/images/pizza-dev.png" alt="Pizza DEV" />
+</header>
+<div class="login">
+    <h1>Login Admin</h1>
+
+    {{#if isPosted}}
+        {{#if hasSuccess}}
+           <div class="msg-sucesso">
+                Exemplo de mensagem de sucesso!
+            </div>
+        {{else}}
+            <div class="msg-erro">
+                Exemplo de mensagem de erro!
+            </div>
+        {{/if}}        
+    {{/if}}
+
+    <form action="" method="post">
+        <input type="text" name="usuario" id="usuario" class="input-field" placeholder="* Usuário" />
+        <input type="password" name="senha" id="senha" class="input-field" placeholder="* Senha" />
+        <button type="submit" class="botao">
+            Acessar
+        </button>
+    </form>
+    <br>
+    <div class="cabecalho flex">
+        <a href="/admin/cadastrar-usuario" class="botao">
+            Não tem uma conta? Cadastre-se aqui
+        </a>
+    </div>
+</div>

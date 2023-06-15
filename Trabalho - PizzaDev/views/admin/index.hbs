@@ -1,0 +1,53 @@
+<div class="pagina container">
+    <div class="cabecalho flex">
+        <a href="/admin/cadastrar_pizza" class="botao">
+            Nova Pizza
+        </a>
+    </div>
+    <div class="tabela-responsiva">
+        <table>
+            <thead>
+                <tr>
+                    <th width="85">Foto</th>
+                    <th>Pizza</th>
+                    <th width="130">Brotinho</th>
+                    <th width="130">Média</th>
+                    <th width="130">Grande</th>
+                    <th width="195" colspan="2"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each pizza}}
+                   <tr>
+                        <td>
+                            <img src="/public/assets/images/{{{this.imgSrc}}}" alt="" />
+                        </td>
+                        <td>
+                            <h3>{{{this.nome}}}</h3>
+                            <p>Ingredientes: {{{this.ingredientes}}}</p>
+                        </td>
+                        <td>
+                            R$ {{{this.precoPeq}}}
+                        </td>
+                        <td>
+                            R$ {{{this.precoMed}}}
+                        </td>
+                        <td>
+                            R$ {{{this.precoGrande}}}
+                        </td>
+                        <td>
+                            <a href="/admin/editar-pizza" class="btn-editar">
+                                <i class="fa-solid fa-pen-to-square"></i> Editar
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/admin" class="btn-excluir">
+                                <i class="fa-regular fa-trash-can"></i> Excluir
+                            </a>
+                        </td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

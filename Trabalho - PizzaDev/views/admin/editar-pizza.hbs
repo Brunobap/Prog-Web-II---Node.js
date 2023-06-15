@@ -1,0 +1,34 @@
+<div class="pagina container">
+    <div class="cabecalho flex bordered">
+        <h1>Editar Pizza</h1>
+        <a href="/admin/" class="botao">
+            Voltar
+        </a>
+    </div>
+
+    {{#if isPosted}}
+        {{#if hasSuccess}}
+           <div class="msg-sucesso">
+                Exemplo de mensagem de sucesso!
+            </div>
+        {{else}}
+            <div class="msg-erro">
+                Exemplo de mensagem de erro!
+            </div>
+        {{/if}}        
+    {{/if}}
+
+    <form action="" method="post">
+        <input type="text" name="nomePizza" id="nomePizza" class="input-field" placeholder="* Nome da Pizza" />
+        <textarea name="descricao" id="descricao" cols="1" rows="6" class="input-field" placeholder="* Descrição dos Ingredientes"></textarea>
+        <div class="group-field flex">
+            <input type="number" name="precoBrotinho" id="precoBrotinho" class="input-field" step=".01" placeholder="* Preço Brotinho" />
+            <input type="number" name="precoMedia" id="precoMedia" class="input-field" step=".01" placeholder="* Preço Média" />
+            <input type="number" name="precoGrande" id="precoGrande" class="input-field" step=".01" placeholder="* Preço Grande" />
+        </div>
+        <input type="text" name="foto" id="foto" class="input-field" placeholder="Foto (ex: pizza-calabresa.jpg)" />
+        <button type="submit" class="botao">
+            Salvar
+        </button>
+    </form>
+</div>

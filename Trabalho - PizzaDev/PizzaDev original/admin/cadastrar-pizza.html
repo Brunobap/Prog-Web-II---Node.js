@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Pizza | Administração | Pizza DEV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css" />
+    <script src="../assets/js/admin.js" defer></script>
+</head>
+<body>
+    <header class="topo flex container-padding">
+        <img src="../assets/images/pizza-dev.png" alt="Pizza DEV" />
+        <nav class="menu">
+            <a href="index.html" class="active">Pizzas</a>
+            <a href="mensagens.html">Mensagens</a>
+            <a href="usuarios.html">Usuários</a>
+            <a href="login.html">Sair</a>
+        </nav>
+    </header>
+    <div class="pagina container">
+        <div class="cabecalho flex bordered">
+            <h1>Cadastrar Pizza</h1>
+            <a href="index.html" class="botao">
+                Voltar
+            </a>
+        </div>
+
+        <div class="msg-sucesso">
+            Exemplo de mensagem de sucesso!
+        </div>
+        <div class="msg-erro">
+            Exemplo de mensagem de erro!
+        </div>
+
+        <form action="" method="post">
+            <input type="text" name="nomePizza" id="nomePizza" class="input-field" placeholder="* Nome da Pizza" />
+            <textarea name="descricao" id="descricao" cols="1" rows="6" class="input-field" placeholder="* Descrição dos Ingredientes"></textarea>
+            <div class="group-field flex">
+                <input type="number" name="precoBrotinho" id="precoBrotinho" class="input-field" step=".01" placeholder="* Preço Brotinho" />
+                <input type="number" name="precoMedia" id="precoMedia" class="input-field" step=".01" placeholder="* Preço Média" />
+                <input type="number" name="precoGrande" id="precoGrande" class="input-field" step=".01" placeholder="* Preço Grande" />
+            </div>
+            <input type="text" name="foto" id="foto" class="input-field" placeholder="Foto (ex: pizza-calabresa.jpg)" />
+            <button type="submit" class="botao">
+                Cadastrar
+            </button>
+        </form>
+    </div>
+</body>
+</html>
