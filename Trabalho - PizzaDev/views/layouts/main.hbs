@@ -28,9 +28,7 @@
                     <a href="/admin" {{#if isPizzas}}class="active"{{/if}} >Pizzas</a>
                     <a href="/admin/mensagens" {{#if isMensagens}}class="active"{{/if}} >Mensagens</a>
                     <a href="/admin/usuarios" {{#if isUsuarios}}class="active"{{/if}} >Usuários</a>
-                    {{#if isLogged}}
-                        <a href="/admin/login" {{#if isLogin}}class="active"{{/if}} >Sair</a>
-                    {{/if}}
+                    <a href="/admin/logout">Sair</a>
                 </nav>
             </header>
         {{/if}}

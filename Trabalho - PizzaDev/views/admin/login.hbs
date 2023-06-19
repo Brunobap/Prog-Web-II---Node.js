@@ -4,14 +4,15 @@
 <div class="login">
     <h1>Login Admin</h1>
 
-    {{#if isPosted}}
+    {{#if isPost}}
         {{#if hasSuccess}}
            <div class="msg-sucesso">
-                Exemplo de mensagem de sucesso!
+                Bem-vindo de volta!
             </div>
         {{else}}
             <div class="msg-erro">
-                Exemplo de mensagem de erro!
+                Não foi possível realizar o login!<br>
+                Favor verificar se suas informações foram preenchidas corretamente.
             </div>
         {{/if}}        
     {{/if}}

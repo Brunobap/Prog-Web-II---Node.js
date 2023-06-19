@@ -6,16 +6,17 @@
         </a>
     </div>
 
-    {{#if isPosted}}
+    {{#if isPost}}
         {{#if hasSuccess}}
            <div class="msg-sucesso">
                 Cadastro realizado com Sucesso!!
             </div>
         {{else}}
             <div class="msg-erro">
-                Cadastro não pode ser realizado!!
+                Cadastro não pode ser realizado!!<br>
+                Favor verificar se as informações foram todas adicionadas corretamente.
             </div>
-        {{/if}}        
+        {{/if}}     
     {{/if}}
 
     <form action="" method="post">

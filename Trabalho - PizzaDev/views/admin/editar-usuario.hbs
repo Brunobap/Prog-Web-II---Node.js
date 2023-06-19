@@ -1,19 +1,20 @@
 <div class="pagina container">
     <div class="cabecalho flex bordered">
         <h1>Editar Usuário</h1>
-        <a href="usuarios.html" class="botao">
+        <a href="../admin/usuarios" class="botao">
             Voltar
         </a>
     </div>
 
-    {{#if isPosted}}
+    {{#if isPost}}
         {{#if hasSuccess}}
            <div class="msg-sucesso">
-                Exemplo de mensagem de sucesso!
+                Alteração feita com sucesso!
             </div>
         {{else}}
             <div class="msg-erro">
-                Exemplo de mensagem de erro!
+                Não pode ser feita com sucesso!<br>
+                Favor verificar se as informações foram todas adicionadas corretamente.
             </div>
         {{/if}}        
     {{/if}}
